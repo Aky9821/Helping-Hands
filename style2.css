@@ -3,7 +3,9 @@
     margin: 0px;
     box-sizing: border-box;
 }
-
+body{
+    overflow-x: hidden;
+}
 .nav-container {
     position: fixed;
     top: 0;
@@ -152,6 +154,9 @@ nav {
 }
 
 @media screen and (min-width:768px) {
+    .home-intro {
+        padding: 50vh 0;
+    }
     .nav_links {
         width: 70%;
         position: static;
