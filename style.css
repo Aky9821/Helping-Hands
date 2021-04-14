@@ -69,7 +69,7 @@ main {
 }
 
 .home-intro {
-    width: auto;
+    width: 100%;
     padding: 47vh 0;
     background: #123 url(Sources/background.jpeg);
     background-size: cover;
