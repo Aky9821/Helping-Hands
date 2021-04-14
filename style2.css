@@ -42,7 +42,7 @@ nav {
 .nav_links {
     position: absolute;
     right: 0px;
-    height: 93vh;
+    height: 92vh;
     top: 9vh;
     background-color: #403e41;
     display: flex;
