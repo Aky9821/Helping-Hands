@@ -69,6 +69,8 @@ main {
 }
 
 .home-intro {
+    border: #d12f2f;
+    border-style: solid;
     width: 100%;
     padding: 47vh 0;
     background: #123 url(Sources/background.jpeg);
