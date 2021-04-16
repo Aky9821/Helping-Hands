@@ -1,0 +1,262 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+body{
+    overflow-x: hidden;
+}
+.nav-container {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+nav {
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 9vh;
+    font-family: 'Poppins', sans-serif;
+    background-color: #403e41;
+
+}
+
+.logo {
+    color: rgb(245, 241, 241);
+    letter-spacing: 2px;
+    font-size: 22px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+}
+
+.logo_img {
+    padding: 10px;
+}
+
+
+
+.nav_links {
+    position: absolute;
+    right: 0px;
+    height: 92vh;
+    top: 9vh;
+    background-color: #403e41;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 50%;
+    transform: translateX(100%);
+    transition: transform 0.4s ease-in;
+}
+
+.nav_links li {
+    opacity: 0;
+}
+
+.burger {
+    display: block;
+    cursor: pointer;
+}
+
+.nav_links a {
+    color: rgb(245, 241, 241);
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.nav_links li {
+    list-style: none;
+}
+
+
+
+.burger div {
+    height: 3px;
+    width: 25px;
+    background-color: rgb(245, 241, 241);
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+
+
+.home-intro {
+
+    width: 100%;
+    padding: 44vh 0;
+    background: #123 url(Sources/background.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-blend-mode: multiply;
+    color: rgb(245, 241, 241);
+    text-align: center;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.home-intro h4 {
+    text-align: center;
+}
+
+.home-about {
+    padding: 15vh 0;
+    max-width: 700px;
+    margin: 0px auto;
+    font-family: 'Noto Sans', sans-serif;
+    text-align: left;
+
+}
+
+.home-about>div {
+    padding: 20px;
+}
+
+.columns {
+    display: flex;
+}
+
+.col+.col {
+    margin-left: 1.5em;
+}
+
+.fade-in {
+    opacity: 0;
+    transition: opacity 250ms ease-in;
+}
+
+.fade-in.appear {
+    opacity: 1;
+}
+
+.more-stuff-grid {
+
+    font-family: 'Noto Sans', sans-serif;
+    background: #f4f4f4;
+    padding: 4em 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 5%;
+
+}
+
+.more-stuff-grid>* {
+    padding: 3%;
+}
+
+.happyimg {
+    width: 40%;
+}
+
+@media screen and (min-width:768px) {
+    .home-intro {
+        padding: 50vh 0;
+    }
+    .nav_links {
+        width: 70%;
+        position: static;
+        flex-direction: row;
+        transform: translateX(0%);
+        height: inherit;
+    }
+    .burger {
+        display: none;
+    }
+    .nav_links li {
+        opacity: 1;
+    }
+    .more-stuff-grid {
+
+        font-family: 'Noto Sans', sans-serif;
+        background: #f4f4f4;
+        padding: 4em 0;
+        display: grid;
+        grid-gap: 2em;
+        align-items: center;
+        grid-template-columns: minmax(1em, 1fr) repeat(2, minmax(200px, 400px)) minmax(1em, 1fr);
+    }
+    .happyimg {
+        width: 90%;
+    }
+    
+    .from-left {
+        grid-column: 2 / 3;
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+    }
+    
+    .from-right {
+        grid-column: 3 / 4;
+        -webkit-transform: translateX(50%);
+        transform: translateX(50%);
+    }
+    
+    .from-left,
+    .from-right {
+        transition: opacity 250ms ease-in, -webkit-transform 400ms ease-in;
+        transition: opacity 250ms ease-in, transform 400ms ease-in;
+        transition: opacity 250ms ease-in, transform 400ms ease-in,
+            -webkit-transform 400ms ease-in;
+        opacity: 0;
+    }
+    
+    .from-left.appear,
+    .from-right.appear {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@media screen and (min-width:1024px) {
+    .nav_links {
+        width: 50%;
+    }
+}
+
+
+
+.nav_active {
+    transform: translateX(0%);
+}
+
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+    opacity: 0;
+}
+
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    to {
+        opacity: 2;
+        transform: translateX(0px);
+    }
+}
+
+footer {
+    font-family: 'Noto Sans', sans-serif;
+    min-height: 3vh;
+
+    color: #403e4180;
+}
+
+footer p {
+    text-align: center;
+    padding: 10px;
+    font-size: smaller;
+}
