@@ -44,7 +44,7 @@
         <p>Fill in the form and click submit to register your complaint.</p>
     </div>
     <div class="form-container">
-        <form id="frm1" action="/action_page.php">
+        <form id="frm1" action="" onsubmit="formsubmit()" target="_blank">
             <div class="row">
                 <div class="col1">
                     <label for="name">Name</label>
@@ -77,7 +77,7 @@
                     <label for="days">Days</label>
                 </div>
                 <div class="col4">
-                    <input required type="number" id="days" name="days" placeholder="ex 10">
+                    <input min="0" required type="number" id="days" name="days" placeholder="ex 10">
                 </div>
             </div>
             <div class="row">
@@ -173,7 +173,7 @@
                 </div>
             </div>
             <div class="row">
-                <input type="submit" value="Submit Complaint">
+                <input type="submit" value="Submit Complaint" id="submit">
             </div>
         </form>
     </div>

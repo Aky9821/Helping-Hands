@@ -21,3 +21,7 @@ const navSlide = () => {
 }
 navSlide();
 
+function formsubmit() {
+    alert("Thank You! Your complaint has been successfully submitted! Now you'll be redirected to the homepage :)");
+    setTimeout(location.replace("index.html"), 3000);
+}
