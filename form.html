@@ -44,7 +44,7 @@
         <p>Fill in the form and click submit to register your complaint.</p>
     </div>
     <div class="form-container">
-        <form id="frm1" action="" onsubmit="formsubmit()" target="_blank">
+        <form id="frm1" action="formprocessor.php" method="post" onsubmit="formsubmit()" target="_blank">
             <div class="row">
                 <div class="col1">
                     <label for="name">Name</label>
@@ -64,7 +64,7 @@
                     <label for="complainttype">Complaint Type</label>
                 </div>
                 <div class="col2">
-                    <select name="complainttype" id="complainttype" required>
+                    <select name="complainttype" id="complainttype" name="complainttype" required>
                         <option disabled selected hidden value="">Select Option</option>
                         <option value="Public Transport">Public Transport</option>
                         <option value="Public Hospitals">Public Hospitals</option>
