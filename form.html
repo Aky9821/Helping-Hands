@@ -85,7 +85,7 @@
                     <label for="address">Address Line 1</label>
                 </div>
                 <div class="col6">
-                    <input required type="text" id="address" placeholder="123 Main Street">
+                    <input required type="text" id="address" name="address" placeholder="123 Main Street">
                 </div>
             </div>
             <div class="row">
@@ -93,7 +93,7 @@
                     <label for="address2">Address Line 2</label>
                 </div>
                 <div class="col6">
-                    <input type="text" id="address2" placeholder="Apartment/Studio/Floor">
+                    <input type="text" id="address2" name="address2" placeholder="Apartment/Studio/Floor">
                 </div>
             </div>
             <div class="row">
@@ -101,7 +101,7 @@
                     <label for="city">City</label>
                 </div>
                 <div class="col8">
-                    <input required type="text" id="city" placeholder="New Delhi">
+                    <input required type="text" id="city" name="city" placeholder="New Delhi">
                 </div>
                 <div class="col9">
                     <label for="state">State</label>
@@ -154,13 +154,13 @@
                     <label for="image">Upload Image</label>
                 </div>
                 <div class="col2">
-                    <input required type="file" id="image" />
+                    <input required type="file" id="image" name="image"/>
                 </div>
                 <div class="col3">
                     <label for="video">Upload Video</label>
                 </div>
                 <div class="col4">
-                    <input type="file" id="video" />
+                    <input type="file" id="video" name="video"/>
                 </div>
             </div>
             <div class="row">
@@ -168,7 +168,7 @@
                     <label for="complaint">Complaint</label>
                 </div>
                 <div class="col6">
-                    <textarea required id="complaint" rows="3"
+                    <textarea required id="complaint" rows="3" name="complaint"
                         placeholder="Brief discription of your complaint here."></textarea>
                 </div>
             </div>
