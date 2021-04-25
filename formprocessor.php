@@ -36,20 +36,22 @@ $fileName = basename($_FILES["image"]["name"]);
 $targetFilePath = $targetDir . $fileName;
 $fileType = pathinfo($targetFilePath,PATHINFO_EXTENSION);
 
-        if(move_uploaded_file($_FILES["image"]["tmp_name"], $targetFilePath)){
-            $insert = $link->query("INSERT into Data (name,email,days,complainttype,address,address2,city,state,zip,complaint,image) VALUES ('$name','$email','$days','$complainttype','$address','$address2','$city','$state','$zip','$complaint','".$fileName."')");
-            if($insert){
-                $statusMsg = "The file ".$fileName. " has been uploaded successfully.";
-            }else{
-                $statusMsg = "File upload failed, please try again.";
-            } 
-        }else{
-            $statusMsg = "Sorry, there was an error uploading your file.";
-        }
-  
+$targetDir2 = "uservideos/";
+$fileName2 = basename($_FILES["video"]["name"]);
+$targetFilePath2 = $targetDir2 . $fileName2;
+$fileType2 = pathinfo($targetFilePath2,PATHINFO_EXTENSION);
 
-// Display status message
-echo $statusMsg;
+if(!empty($_FILES["video"]["name"])){
+    
+        if(move_uploaded_file($_FILES["image"]["tmp_name"], $targetFilePath) && move_uploaded_file($_FILES["video"]["tmp_name"], $targetFilePath2) ){
+            $insert = $link->query("INSERT into Data (name,email,days,complainttype,address,address2,city,state,zip,complaint,image,video) VALUES ('$name','$email','$days','$complainttype','$address','$address2','$city','$state','$zip','$complaint','".$fileName."','".$fileName2."')");
+        }
+}
+else{
+    if(move_uploaded_file($_FILES["image"]["tmp_name"], $targetFilePath)){
+            $insert = $link->query("INSERT into Data (name,email,days,complainttype,address,address2,city,state,zip,complaint,image) VALUES ('$name','$email','$days','$complainttype','$address','$address2','$city','$state','$zip','$complaint','".$fileName."')");
+    }
+}
 ?>
 
 
